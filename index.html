@@ -34,7 +34,8 @@
   <body class="mulish">
     <!-- Header Content  -->
     <header>
-      <nav class="container mx-auto px-4">
+      <!-- Navbar Section  -->
+      <nav class="container mx-auto px-4 py-4">
         <div class="navbar bg-base-100">
           <div class="navbar-start">
             <a class="btn btn-ghost text-xl">ReTro</a>
@@ -114,7 +115,69 @@
       </nav>
     </header>
     <!-- Main content  -->
-    <main></main>
+    <main>
+      <!-- Hero Section  -->
+      <section class="py-10 mx-2">
+        <div
+          class="container mx-auto px-4 py-24 bg-no-repeat bg-center bg-cover rounded-3xl bg-[#12132D] bg-[url(assets/images/bgbanner.png)]"
+        >
+          <div
+            class="flex gap-10 items-center justify-around flex-col lg:flex-row"
+          >
+            <div>
+              <h1
+                class="text-6xl font-black text-white text-center lg:text-left"
+              >
+                Welcome to the <br />
+                <span class="text-[#797DFC]">ReTro</span> Forum
+              </h1>
+              <p
+                class="font-medium text-xl py-4 text-slate-400 text-center lg:text-left"
+              >
+                Share your favorite opinion and win and wp forum coffee mug!
+              </p>
+              <label
+                class="input input-bordered flex items-center gap-2 rounded-full"
+              >
+                <input type="text" class="grow" placeholder="Search" />
+                <span
+                  class="badge cursor-pointer bg-[#797DFC] border-transparent text-white font-semibold py-4 px-5 hover:bg-transparent hover:text-[#797DFC] hover:border-[#797DFC]"
+                  >Optional</span
+                >
+              </label>
+            </div>
+            <div class="hidden lg:flex">
+              <ul class="bg-slate-50 rounded-lg py-3 px-3">
+                <li
+                  class="flex justify-between gap-10 px-2 py-1 font-medium text-xl"
+                >
+                  <strong>Registered Users</strong>
+                  <span>1</span>
+                </li>
+                <li
+                  class="flex justify-between gap-10 px-2 py-1 font-medium text-xl"
+                >
+                  <strong>Forum</strong>
+                  <span>1</span>
+                </li>
+                <li
+                  class="flex justify-between gap-10 px-2 py-1 font-medium text-xl"
+                >
+                  <strong>Topics</strong>
+                  <span>1</span>
+                </li>
+                <li
+                  class="flex justify-between gap-10 px-2 py-1 font-medium text-xl"
+                >
+                  <strong>Replies</strong>
+                  <span>1</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer content  -->
     <footer></footer>
     <script src="assets/js/script.js"></script>

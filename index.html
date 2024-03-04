@@ -187,73 +187,20 @@
             Yes, you can run unit tests and view the results directly within the
             app. The integrated testing features allow for a streamlined .
           </p>
-          <div id="allPost" class="grid lg:grid-cols-3 gap-8 items-start">
+          <div class="grid lg:grid-cols-3 gap-8 items-start">
             <!-- Post 1  -->
-            <div class="lg:col-span-2">
-              <div class="border-2 flex gap-4 py-4 px-5 rounded-xl bg-gray-100">
-                <div>
-                  <div class=" w-20  bg-gray-300 rounded-lg relative">
-                    <img class="w-[100%]" src="assets/images/Ellipse 1.png" alt="">
-                    <span
-                      class="absolute -top-1 -right-1 rounded-full p-2 bg-red-500"
-                    ></span>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex flex-col border-b-2 pb-2 border-dashed">
-                    <div class="flex gap-3">
-                      <span># Music </span>
-                      <span>Author : Awlad Hossain </span>
-                    </div>
-                    <h1 class="text-xl text-[#12132D] font-bold">Post title</h1>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quisquam non, aspernatur quae recusandae illo dolores.
-                    </p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <div class="flex gap-6 pt-2">
-                      <div class="flex gap-2 items-center">
-                        <i class="bi bi-chat-left"></i>
-                        <span>122</span>
-                      </div>
-                      <div class="flex gap-2 items-center">
-                        <i class="bi bi-eye"></i>
-                        <span>45</span>
-                      </div>
-                      <div class="flex gap-2 items-center">
-                        <i class="bi bi-clock"></i>
-                        <span>5 min</span>
-                      </div>
-                    </div>
-                    <div class="cursor-pointer">
-                      <img src="assets/images/email 1.svg" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div id="allPost" class="lg:col-span-2"></div>
             <div class="bg-slate-200 py-5 px-4 rounded-xl">
+              <!-- Mark Items  -->
               <div class="flex gap-2 justify-between items-center py-4">
                 <h1 class="text-xl font-bold">Title</h1>
                 <div class="flex gap-1 items-center">
                   <img src="assets/images/Frame.svg" alt="" />
-                  <p>Mark as read (<span>4</span>)</p>
+                  <p>Mark as read (<span id="remarkPostCounter">0</span>)</p>
                 </div>
               </div>
               <div id="watchedContent" class="flex flex-col gap-4">
-                <!-- content-1  -->
-                <div
-                  class="flex justify-between gap-4 py-3 px-2 rounded-xl bg-slate-300"
-                >
-                  <h1 class="font-bold text-base">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </h1>
-                  <div class="flex gap-2 items-center">
-                    <i class="bi bi-eye"></i>
-                    <span>232</span>
-                  </div>
-                </div>
+                <!-- Watched Contents  -->
               </div>
             </div>
           </div>

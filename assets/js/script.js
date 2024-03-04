@@ -1,6 +1,14 @@
 // Element Selectors
 const latestPost = document.getElementById("latestPost");
 const allPost = document.getElementById("allPost");
+const watchedContent = document.getElementById("watchedContent");
+const remarkPostCounter = document.getElementById("remarkPostCounter");
+
+// counter value
+let counter = 0;
+function initialValue() {
+  remarkPostCounter.textContent = counter;
+}
 
 // All post Functionality
 async function fetchAllPost() {
@@ -17,7 +25,7 @@ fetchAllPost();
 function displayAllPost(data) {
   for (post of data) {
     const postItem = document.createElement("div");
-    postItem.classList.add("lg:col-span-2");
+    postItem.classList.add("my-3");
     postItem.innerHTML = `
     <div class="border-2 flex gap-4 py-4 px-5 rounded-xl bg-gray-100">
     <div>
@@ -54,7 +62,7 @@ function displayAllPost(data) {
             <span>${post.posted_time}</span>
           </div>
         </div>
-        <div class="cursor-pointer">
+        <div class="cursor-pointer" onclick="getRemarkData(${post.id})">
           <img src="assets/images/email 1.svg" alt="" />
         </div>
       </div>
@@ -65,6 +73,42 @@ function displayAllPost(data) {
   }
 }
 
+// Functionality of get remark data
+async function getRemarkData(id) {
+  const res = await fetch(
+    "https://openapi.programming-hero.com/api/retro-forum/posts"
+  );
+  const data = await res.json();
+  const allPost = data.posts;
+  displayRemarkData(allPost, id);
+}
+
+function displayRemarkData(data, id) {
+  for (post of data) {
+    if (post.id === id) {
+      const remarkPost = document.createElement("div");
+      remarkPost.classList.add(
+        "flex",
+        "justify-between",
+        "gap-4",
+        "py-3",
+        "px-2",
+        "rounded-xl",
+        "bg-slate-300"
+      );
+      remarkPost.innerHTML = `
+      <h1 class="font-bold text-base"> ${post.title} </h1>
+      <div class="flex gap-2 items-center">
+        <i class="bi bi-eye"></i>
+        <span>${post.view_count}</span>
+      </div>
+      `;
+      watchedContent.appendChild(remarkPost);
+      counter++;
+      initialValue();
+    }
+  }
+}
 // Latest Post Functionality
 async function fetchLatestPost() {
   const res = await fetch(
